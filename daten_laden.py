@@ -17,12 +17,26 @@ def dokumente_einlesen():
     return dokumente
 
 if __name__ == "__main__":
-
-    try:
-        docs = dokumente_einlesen()
-        print(docs)
-        print(docs[0].text[:200] + "...")
     
+    try:
+        alle_dokumente = dokumente_einlesen()
+        
+        if alle_dokumente:
+            print(f"Gesamtanzahl der Pakete (Chunks/Seiten): {len(alle_dokumente)}")
+            print("="*60)
+            
+            for index, doc in enumerate(alle_dokumente):
+                print(f" Paketnummer: {index + 1}")
+                print(f"ID (Intern): {doc.id_}")
+                print(f"Metadaten: {doc.metadata}")
+                
+                text_vorschau = doc.text[:100].replace('\n', ' ')
+                print(f"Inhalt: {text_vorschau}...")
+                
+                print("-" * 60)
+                
+        else:
+            print("Keine Dokumente gefunden.")
             
     except Exception as e:
-        print(f"Ein Fehler ist aufgetreten: {e}")
+        print(f"Fehler. {e}")
