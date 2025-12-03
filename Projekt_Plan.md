@@ -13,3 +13,5 @@
 * Script erstellen für Ingestion - erledigt
 * Script erstellen für Indexing - erledigt
 * Query-Engine erstellen - erledigt
+
+## Phase 3: Grafische Benutzeroberfläche
