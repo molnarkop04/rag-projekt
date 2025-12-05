@@ -1,4 +1,3 @@
-import os
 from dotenv import load_dotenv
 from llama_index.core import VectorStoreIndex
 from daten_laden import dokumente_einlesen

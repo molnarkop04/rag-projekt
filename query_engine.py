@@ -1,5 +1,4 @@
 import os
-import sys
 from dotenv import load_dotenv
 from llama_index.core import StorageContext, load_index_from_storage
 
@@ -12,8 +11,8 @@ def chat_starten():
     if not os.path.exists(speicher_ordner):
         return
 
-    speicher_kontext = StorageContext.from_defaults(persist_dir=speicher_ordner)
-    index = load_index_from_storage(speicher_kontext)
+    uebergabe = StorageContext.from_defaults(persist_dir=speicher_ordner)
+    index = load_index_from_storage(uebergabe)
 
     query_engine = index.as_query_engine()
     
