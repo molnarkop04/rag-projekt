@@ -23,7 +23,7 @@ def lade_suchmaschine():
 
 def index_neu_bauen():
 
-    with st.spinner("Lese PDFs und baue Index... (Das kostet Geld bei OpenAI)"):
+    with st.spinner("Lese PDFs und baue Index..."):
 
         docs = dokumente_einlesen()
         index = VectorStoreIndex.from_documents(docs)
