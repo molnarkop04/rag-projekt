@@ -1,0 +1,81 @@
+[data-testid="stHeader"] {
+
+    /* Basisfarbe */
+    background-color: #09090B !important;
+    
+    box-shadow: 0 8px 30px #06b6d444 !important;
+    
+    /* leuchtender Rand unten */
+    border-bottom: 1px solid rgba(6, 182, 212, 0.3) !important;
+}
+
+[data-testid="stBottom"] {
+
+    background-color: #09090B !important;
+
+    box-shadow: 0 -8px 30px rgba(6, 182, 212, 0.3) !important;
+    
+    border-top: 1px solid rgba(6, 182, 212, 0.3) !important;
+  
+    z-index: 9999 !important;
+}
+
+/* Sicherheitshalber: Die innere Ebene unten auch abdunkeln */
+[data-testid="stBottom"] > div {
+    background-color: #09090B !important;
+    background-image: none !important;
+}
+
+/* Allgemeiner Hintergrund */
+.stApp {
+    background-color: #09090B !important;
+    color: rgb(137, 5, 21) !important; /* Off-White Text */
+}
+
+h1, .main-title {
+    text-align: center !important;
+    width: 100% !important;
+    
+    /* Farbe und Leuchten */
+    color: #1d9db4 !important; /* Neon Pink */
+    text-shadow: 0 0 10px rgba(239, 70, 70, 0.7), /* Weicher Schein */
+                 0 0 20px rgba(239, 70, 70, 0.5), /* Mittlerer Schein */
+                 0 0 40px rgba(239, 70, 70, 0.3); /* Breiter Schein */
+                 
+    /* Text */
+    font-weight: 100 !important; /* dünn/fett machen */
+    text-transform: uppercase !important; /* Großbuchstaben */
+    letter-spacing: 2px !important; /* Buchstaben auseinanderziehen */
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #18181B !important;
+    border-right: 1px solid #27272A !important;
+}
+
+/* Eingabefeldfeld: */
+[data-testid="stChatInput"] > div {
+    background-color: #27272A !important;
+    border: 1px solid #06B6D4 !important; 
+    border-radius: 20px !important;
+    color: white !important;
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.2) !important;
+}
+
+/* Inneres transparent */
+[data-testid="stChatInput"] > div * {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Text im Feld */
+[data-testid="stChatInput"] textarea, 
+[data-testid="stChatInput"] input {
+    color: #E4E4E7 !important;
+}
+
+/* Senden-Button */
+[data-testid="stChatInput"] button:hover svg {
+    fill: #9714a5 !important;
+}

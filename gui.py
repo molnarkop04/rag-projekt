@@ -5,10 +5,18 @@ from llama_index.core import StorageContext, load_index_from_storage, VectorStor
 from daten_laden import dokumente_einlesen
 
 load_dotenv()
+
+def lade_css(dateiname):
+
+    with open(dateiname) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+lade_css("style.css")
+
 speicher = "./storage"
 
 st.set_page_config(page_title="KI-Assistent", page_icon=None)
-st.title("WALL E - Assistent")
+st.title("Retrieval-Augmented Generation")
 
 @st.cache_resource
 def lade_suchmaschine():
