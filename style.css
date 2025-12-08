@@ -50,7 +50,8 @@ h1, .main-title {
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #18181B !important;
+    background-color: #09090B !important;
+    color: #f6f1f1 !important;
     border-right: 1px solid #27272A !important;
 }
 
@@ -75,7 +76,28 @@ h1, .main-title {
     color: #E4E4E7 !important;
 }
 
-/* Senden-Button */
+/* Sendebutton */
+[data-testid="stChatInput"] button svg {
+    fill: #f6f1f1 !important;
+}
+
 [data-testid="stChatInput"] button:hover svg {
-    fill: #9714a5 !important;
+    fill: #c922b8 !important;
+}
+
+[data-testid="stHeader"] {
+    color: #f6f1f1 !important; 
+}
+
+[data-testid="stHeader"]:hover {
+    color: #c922b8 !important; 
+}
+
+/* Die drei Punkte */
+[data-testid="stHeader"] svg {
+    fill: #f6f1f1 !important;
+}
+
+[data-testid="stHeader"] svg:hover {
+    fill: #c922b8 !important; 
 }
