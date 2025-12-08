@@ -27,9 +27,9 @@ h1, .main-title {
     
     /* Farbe und Leuchten */
     color: #1cb0ca !important; /* Neon Pink */
-    text-shadow: 0 0 10px rgba(239, 70, 70, 0.7), /* Weicher Schein */
-                 0 0 20px rgba(239, 70, 70, 0.5), /* Mittlerer Schein */
-                 0 0 40px rgba(239, 70, 70, 0.3); /* Breiter Schein */
+    text-shadow: 0 0 10px rgba(239, 70, 70, 0.7), 
+                 0 0 20px rgba(239, 70, 70, 0.5),
+                 0 0 40px rgba(239, 70, 70, 0.3);
                  
     /* Text */
     font-weight: 100 !important; /* dünn/fett machen */
