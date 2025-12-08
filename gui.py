@@ -41,10 +41,9 @@ def index_neu_bauen():
         return index.as_query_engine()
 
 with st.sidebar:
-    st.header("Einstellungen")
-    st.write("Lege neue PDFs in den Ordner data und klicke hier:")
+    st.header("Konfiguration")
     
-    if st.button("Index neu erstellen / Aktualisieren"):
+    if st.button("Ordner erstellen/aktualisieren:"):
 
         st.session_state.engine = index_neu_bauen()
         st.session_state.messages = []

@@ -1,21 +1,10 @@
-[data-testid="stHeader"] {
-
-    /* Basisfarbe */
-    background-color: #09090B !important;
-    
-    box-shadow: 0 8px 30px #06b6d444 !important;
-    
-    /* leuchtender Rand unten */
-    border-bottom: 1px solid rgba(6, 182, 212, 0.3) !important;
-}
-
 [data-testid="stBottom"] {
 
     background-color: #09090B !important;
 
-    box-shadow: 0 -8px 30px rgba(6, 182, 212, 0.3) !important;
+    box-shadow: 0 -8px 30px #820fbb44 !important;
     
-    border-top: 1px solid rgba(6, 182, 212, 0.3) !important;
+    border-top: 1px solid #820fbb44 !important;
   
     z-index: 9999 !important;
 }
@@ -29,7 +18,7 @@
 /* Allgemeiner Hintergrund */
 .stApp {
     background-color: #09090B !important;
-    color: rgb(137, 5, 21) !important; /* Off-White Text */
+    color: rgb(137, 5, 21) !important;
 }
 
 h1, .main-title {
@@ -37,7 +26,7 @@ h1, .main-title {
     width: 100% !important;
     
     /* Farbe und Leuchten */
-    color: #1d9db4 !important; /* Neon Pink */
+    color: #1cb0ca !important; /* Neon Pink */
     text-shadow: 0 0 10px rgba(239, 70, 70, 0.7), /* Weicher Schein */
                  0 0 20px rgba(239, 70, 70, 0.5), /* Mittlerer Schein */
                  0 0 40px rgba(239, 70, 70, 0.3); /* Breiter Schein */
@@ -46,13 +35,6 @@ h1, .main-title {
     font-weight: 100 !important; /* dünn/fett machen */
     text-transform: uppercase !important; /* Großbuchstaben */
     letter-spacing: 2px !important; /* Buchstaben auseinanderziehen */
-}
-
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background-color: #09090B !important;
-    color: #f6f1f1 !important;
-    border-right: 1px solid #27272A !important;
 }
 
 /* Eingabefeldfeld: */
@@ -82,15 +64,20 @@ h1, .main-title {
 }
 
 [data-testid="stChatInput"] button:hover svg {
-    fill: #c922b8 !important;
+    fill: rgb(147, 24, 203) !important;
 }
 
 [data-testid="stHeader"] {
+    /* Basisfarbe */
+    background-color: #09090B !important;
+    
+    box-shadow: 0 8px 30px #820fbb44 !important;
+    
+    /* leuchtender Rand unten */
+    border-bottom: 1px solid #820fbb44(6, 182, 212, 0.3) !important;
+    
+    /* Default Textfarbe */
     color: #f6f1f1 !important; 
-}
-
-[data-testid="stHeader"]:hover {
-    color: #c922b8 !important; 
 }
 
 /* Die drei Punkte */
@@ -99,5 +86,90 @@ h1, .main-title {
 }
 
 [data-testid="stHeader"] svg:hover {
-    fill: #c922b8 !important; 
+    fill: rgb(147, 24, 203) !important; 
+}
+
+/* 1. Fokus auf den Link (a) oder den Button (der den Text enthält) */
+[data-testid="stHeader"] a:hover,
+[data-testid="stHeader"] button:hover {
+    color: rgb(147, 24, 203) !important; /* Ändert die Farbe der Link-Elemente */
+}
+
+/* 2. Fokus auf den Text (span/div) im Link/Button */
+[data-testid="stHeader"] a:hover span,
+[data-testid="stHeader"] button:hover span {
+    color: rgb(147, 24, 203) !important;
+}
+
+/* --- Sidebars */
+
+[data-testid="stExpandSidebarButton"],
+[data-testid="stExpandSidebarButton"] *,
+[data-testid="stExpandSidebarButton"] span,
+[data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"] {
+    color: #f6f1f1 !important;
+    fill: #f6f1f1 !important;
+}
+
+[data-testid="stExpandSidebarButton"]:hover *,
+[data-testid="stExpandSidebarButton"]:hover span,
+[data-testid="stExpandSidebarButton"]:hover [data-testid="stIconMaterial"] {
+    color: rgb(147, 24, 203) !important;
+    fill: rgb(147, 24, 203) !important;
+}
+
+
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarCollapseButton"] button,
+[data-testid="stSidebarCollapseButton"] div,
+[data-testid="stSidebarCollapseButton"] svg,
+[data-testid="stSidebarCollapseButton"] svg *,
+[data-testid="stSidebarCollapseButton"] * {
+    fill: #f6f1f1 !important;
+    color: #f6f1f1 !important;
+}
+
+[data-testid="stSidebarCollapseButton"]:hover,
+[data-testid="stSidebarCollapseButton"]:hover button,
+[data-testid="stSidebarCollapseButton"]:hover div,
+[data-testid="stSidebarCollapseButton"]:hover svg,
+[data-testid="stSidebarCollapseButton"]:hover svg *,
+[data-testid="stSidebarCollapseButton"]:hover * {
+    fill: rgb(147, 24, 203) !important;
+    color: rgb(147, 24, 203) !important;
+}
+
+/* Sidebar Seitenleuchte */
+[data-testid="stSidebar"] {
+    background-color: #09090B !important;
+    border-right: none !important;
+    box-shadow: 4px 0 30px rgba(6, 182, 212, 0.4) !important;
+}
+
+[data-testid="stSidebar"] h2 {
+    color: #1cb0ca !important;
+    text-align: center !important;
+    text-shadow: 0 0 10px rgba(239, 70, 70, 0.7),
+                 0 0 20px rgba(239, 70, 70, 0.5), 
+                 0 0 40px rgba(239, 70, 70, 0.3); 
+    margin-bottom: 20px !important;
+}
+
+/* Sidebar Button */
+[data-testid="stSidebar"] .stButton {
+    margin-top: 5px !important;
+}
+
+/* Sidebar-Button */
+[data-testid="stSidebar"] button:hover {
+    color: rgb(147, 24, 203) !important;
+    background-color: rgb(0, 0, 0) !important;
+}
+
+/* Im Sidebar den Button verändern */
+.stButton > button {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
