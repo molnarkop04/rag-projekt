@@ -39,10 +39,34 @@ def index_neu_bauen():
         st.success("Index erfolgreich neu erstellt!")
 
         return index.as_query_engine()
+    
+def DokementenAnzeige():
+
+    daten_ordner = "./data"
+    
+    try:
+        dateien = [
+            f for f in os.listdir(daten_ordner) 
+            if f.lower().endswith(".pdf") and os.path.isfile(os.path.join(daten_ordner, f))
+        ]
+    except FileNotFoundError:
+        st.sidebar.error(f"Der Ordner {daten_ordner} wurde nicht gefunden.")
+        return
+
+    if dateien:
+        st.sidebar.markdown("---")
+
+        with st.sidebar.expander("Hochgeladene PDFs"):
+            liste_markdown = "\n".join([f"* {dateiname}" for dateiname in dateien])
+            st.markdown(liste_markdown)
+    else:
+        st.sidebar.info("Keine PDF-Dateien im data-Ordner gefunden.")
 
 with st.sidebar:
     st.header("Konfiguration")
-    
+
+    DokementenAnzeige()
+
     if st.button("Ordner erstellen/aktualisieren:"):
 
         st.session_state.engine = index_neu_bauen()
@@ -55,7 +79,6 @@ if "engine" not in st.session_state:
     else:
         st.info("Kein Index gefunden. Bitte klicke links auf Index erstellen.")
         st.stop()
-
 
 if "messages" not in st.session_state:
 
